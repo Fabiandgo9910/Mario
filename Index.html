@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Corazón HTML</title>
+    <style>
+        .heart {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.5s infinite ease-in-out;
+            margin: auto;
+            margin-top: 20%;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(-45deg);
+            }
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .heart::before {
+            top: -100px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 100px;
+        }
+
+        h1 {
+            color: rgb(240, 243, 255);
+            z-index: 100000;
+            position: relative;
+            transform: scale(1.1) rotate(45deg);
+        }
+
+        .a {
+            margin-left: 10%;
+            margin-top: -5%;
+
+        }
+
+        .b {
+            margin-top: 20%;
+            margin-left: 45%;
+        }
+
+        .c {
+            margin-top: -2%;
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">
+        <H1 class="c">BETHANY</H1>
+        <H1 class="b">OK</H1>
+        <H1 class="a">FABIAN</H1>
+    </div>
+</body>
+
+</html>
